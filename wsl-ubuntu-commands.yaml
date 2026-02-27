@@ -1,0 +1,59 @@
+# WSL Ubuntu Commands
+
+This document organizes useful WSL Ubuntu bash commands by category, providing descriptions for each command to help users understand their function.
+
+## System Information
+
+- **`uname -a`**: Displays system information, including the kernel version and architecture.
+- **`hostname`**: Shows the name of the current host.
+- **`top`**: Displays running processes and system resource usage in real time.
+- **`df -h`**: Shows disk space usage across all mounted filesystems in a human-readable format.
+
+## File Management
+
+- **`ls`**: Lists files in a directory.
+- **`cd <directory>`**: Changes the current directory to the specified directory.
+- **`cp <source> <destination>`**: Copies files from the source to the destination.
+- **`mv <source> <destination>`**: Moves or renames files from the source to the destination.
+- **`rm <file>`**: Deletes a specified file.
+
+## Process Management
+
+- **`ps`**: Displays currently running processes.
+- **`kill <PID>`**: Terminates the process with the specified Process ID (PID).
+- **`bg`**: Places a background job in the background.
+- **`fg`**: Brings a background job to the foreground.
+
+## Networking
+
+- **`ping <host>`**: Tests connectivity to a specified host.
+- **`ifconfig`**: Displays network interface configurations.
+- **`ssh <user>@<host>`**: Connects to a remote host via SSH.
+
+## Package Management
+
+- **`sudo apt update`**: Updates the list of available packages.
+- **`sudo apt upgrade`**: Upgrades all installed packages to their latest versions.
+- **`sudo apt install <package>`**: Installs the specified package.
+- **`sudo apt remove <package>`**: Removes the specified package.
+
+## Disk Management
+
+- **`fdisk -l`**: Lists all disk partitions.
+- **`mount <device> <mountpoint>`**: Mounts a filesystem.
+- **`umount <mountpoint>`**: Unmounts a filesystem.
+
+## User Management
+
+- **`adduser <username>`**: Adds a new user to the system.
+- **`deluser <username>`**: Removes an existing user from the system.
+- **`passwd <username>`**: Changes the password of a specified user.
+
+## Miscellaneous
+
+- **`man <command>`**: Displays the manual page for the specified command.
+- **`echo <text>`**: Prints the specified text to the terminal.
+- **`history`**: Shows the command history.
+
+
+With this functionality, users can easily access and utilize essential WSL Ubuntu bash commands in a structured manner.
