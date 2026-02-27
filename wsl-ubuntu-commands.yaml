@@ -1,59 +1,60 @@
 # WSL Ubuntu Commands
 
-This document organizes useful WSL Ubuntu bash commands by category, providing descriptions for each command to help users understand their function.
+## Networking Commands
 
-## System Information
+### Check Active Network Interfaces
+```bash
+ifconfig
+```
+Displays all active network interfaces along with their IP addresses.
 
-- **`uname -a`**: Displays system information, including the kernel version and architecture.
-- **`hostname`**: Shows the name of the current host.
-- **`top`**: Displays running processes and system resource usage in real time.
-- **`df -h`**: Shows disk space usage across all mounted filesystems in a human-readable format.
+### Check IP Address
+```bash
+hostname -I
+```
+Displays the IP address(es) of the host.
 
-## File Management
+### Ping Command
+```bash
+ping <hostname>
+```
+Tests the reachability of a host and measures the round-trip time.
 
-- **`ls`**: Lists files in a directory.
-- **`cd <directory>`**: Changes the current directory to the specified directory.
-- **`cp <source> <destination>`**: Copies files from the source to the destination.
-- **`mv <source> <destination>`**: Moves or renames files from the source to the destination.
-- **`rm <file>`**: Deletes a specified file.
+### List Open Ports
+```bash
+ss -tuln
+```
+Lists all open ports and the services using them.
 
-## Process Management
+## Security Commands
 
-- **`ps`**: Displays currently running processes.
-- **`kill <PID>`**: Terminates the process with the specified Process ID (PID).
-- **`bg`**: Places a background job in the background.
-- **`fg`**: Brings a background job to the foreground.
+### Update Package List
+```bash
+sudo apt update
+```
+Updates the package list to ensure you have the latest information on available packages.
 
-## Networking
+### Upgrade Installed Packages
+```bash
+sudo apt upgrade
+```
+Upgrades installed packages to their latest versions.
 
-- **`ping <host>`**: Tests connectivity to a specified host.
-- **`ifconfig`**: Displays network interface configurations.
-- **`ssh <user>@<host>`**: Connects to a remote host via SSH.
+### Install Firewall
+```bash
+sudo apt install ufw
+```
+Installs Uncomplicated Firewall (UFW) for easier firewall management.
 
-## Package Management
+### Enable Firewall
+```bash
+sudo ufw enable
+```
+Enables the firewall to restrict access to the system.
 
-- **`sudo apt update`**: Updates the list of available packages.
-- **`sudo apt upgrade`**: Upgrades all installed packages to their latest versions.
-- **`sudo apt install <package>`**: Installs the specified package.
-- **`sudo apt remove <package>`**: Removes the specified package.
-
-## Disk Management
-
-- **`fdisk -l`**: Lists all disk partitions.
-- **`mount <device> <mountpoint>`**: Mounts a filesystem.
-- **`umount <mountpoint>`**: Unmounts a filesystem.
-
-## User Management
-
-- **`adduser <username>`**: Adds a new user to the system.
-- **`deluser <username>`**: Removes an existing user from the system.
-- **`passwd <username>`**: Changes the password of a specified user.
-
-## Miscellaneous
-
-- **`man <command>`**: Displays the manual page for the specified command.
-- **`echo <text>`**: Prints the specified text to the terminal.
-- **`history`**: Shows the command history.
-
-
-With this functionality, users can easily access and utilize essential WSL Ubuntu bash commands in a structured manner.
+### Deny All Incoming Traffic
+```bash
+sudo ufw default deny incoming
+```
+Sets the default policy to deny all incoming connections.
+```
